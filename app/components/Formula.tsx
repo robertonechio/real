@@ -6,11 +6,13 @@ import { ReactElement, JSXElementConstructor, ReactNode, ReactPortal, PromiseLik
 type Formula = {
   name: string,
   type: number,
+  onClick?: any
 }
 
 export default function Formula({
   name,
-  type
+  type,
+  onClick
 }: Formula) {
   return (
     <>

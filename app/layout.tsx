@@ -16,7 +16,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={lexendDeca.className}>{children}</body>
+      <body className={lexendDeca.className}><div className='bg-zinc-950 h-full min-h-screen w-screen'>{children}</div></body>
     </html>
   )
 }
