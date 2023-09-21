@@ -1,6 +1,7 @@
 import './globals.css'
 import type { Metadata } from 'next'
 import { Inter, Lexend_Deca } from 'next/font/google'
+import Nav from './components/Nav'
 
 const lexendDeca = Lexend_Deca({ subsets: ['latin'] })
 
@@ -16,7 +17,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={lexendDeca.className}><div className='bg-zinc-950 h-full min-h-screen w-screen'>{children}</div></body>
+      <body className={lexendDeca.className}>
+        <div className='bg-zinc-950 h-full min-h-screen w-screen'>
+        <Nav />
+        {children}
+        </div>
+      </body>
     </html>
   )
 }
