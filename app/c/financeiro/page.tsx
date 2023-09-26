@@ -11,7 +11,7 @@ export default function Page() {
       <h1 className='text-center text-3xl text-yellow-500'>Financeiro</h1>
       <div className='flex align-center justify-center flex-wrap mx-6'>
       <div className='flex align-center justify-center flex-wrap mx-6'>
-      <Formula name={'Juros simples'} type={3} />
+      <Formula name={'Juros simples'} type={3} link={'/c/financeiro/juros-simples'}/>
       <Formula name={'Juros composto'} type={3} />
       <Formula name={'Gorjeta'} type={3} />
       <Formula name={'Conversor de Moeda'} type={3} />

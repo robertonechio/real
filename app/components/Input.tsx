@@ -7,6 +7,7 @@ interface InputProps {
   required?: boolean;
   disabled?: boolean;
   placeholder?: string;
+  children?: React.ReactNode
 }
 
 const Input: React.FC<InputProps> = ({
@@ -16,6 +17,7 @@ const Input: React.FC<InputProps> = ({
   type = 'text',
   disabled,
   placeholder,
+  children
 }) => {
   return ( 
     <div>
@@ -23,6 +25,7 @@ const Input: React.FC<InputProps> = ({
         htmlFor={id} 
         className="
           mx-4
+          my-1
           block 
           text-sm 
           font-medium 
@@ -31,7 +34,7 @@ const Input: React.FC<InputProps> = ({
           text-lg
         "
       >
-        {label}
+        {label}{children}
       </label>
       <div className="">
         <input
@@ -39,7 +42,7 @@ const Input: React.FC<InputProps> = ({
           type={type}
           autoComplete={id}
           disabled={disabled}
-          className="p-1.5 mx-4 text-zinc-100 bg-zinc-900 rounded border border-zinc-500/40 hover:border-zinc-700/40 hover:bg-zinc-900/10"
+          className="p-1.5 mx-4 text-zinc-100 bg-zinc-950 rounded border border-zinc-500/40 hover:border-zinc-700/40 hover:bg-zinc-900/10"
         />
       </div>
     </div>

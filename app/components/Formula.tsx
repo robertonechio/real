@@ -6,16 +6,17 @@ import { ReactElement, JSXElementConstructor, ReactNode, ReactPortal, PromiseLik
 type Formula = {
   name: string,
   type: number,
-  onClick?: any
+  link?: string
 }
 
 export default function Formula({
   name,
   type,
-  onClick
+  link = "#"
 }: Formula) {
   return (
     <>
+    <a href={link}>
       {type === 0 && (
         <div className='py-4 px-4 text-zinc-100 bg-zinc-900 rounded mx-4 my-4 w-96 border border-zinc-500/40 hover:border-blue-700/40 hover:bg-blue-900/10'>
           <p className='text-xs text-blue-500'>Conversores de unidades</p>
@@ -40,6 +41,22 @@ export default function Formula({
         <p>{name}</p>
       </div>
       )}
+      {type === 100 && (
+        <div className='py-4 px-4 text-zinc-100 bg-zinc-900 rounded mx-4 my-4 w-96 border border-zinc-500/40 hover:border-yellow-700/40 hover:bg-yellow-900/10'>
+        <p className='text-xl text-yellow-500'>{name}</p>
+      </div>
+      )}
+      {type === 101 && (
+        <div className='py-4 px-4 text-zinc-100 bg-zinc-900 rounded mx-4 my-4 w-96 border border-zinc-500/40 hover:border-purple-700/40 hover:bg-purple-900/10'>
+        <p className='text-xl text-purple-500'>{name}</p>
+      </div>
+      )}
+      {type === 102 && (
+        <div className='py-4 px-4 text-zinc-100 bg-zinc-900 rounded mx-4 my-4 w-96 border border-zinc-500/40 hover:border-blue-700/40 hover:bg-blue-900/10'>
+        <p className='text-xl text-blue-500'>{name}</p>
+      </div>
+      )}
+      </a>
     </>
   )
 }
